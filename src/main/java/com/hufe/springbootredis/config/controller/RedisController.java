@@ -18,6 +18,7 @@ public class RedisController {
 
     @GetMapping("link")
     public String testLinked() {
+        System.out.println("test redis");
         redisTemplate.opsForValue().set("name", "wusong");
         Object name = redisTemplate.opsForValue().get("name");
         System.out.println(name);
